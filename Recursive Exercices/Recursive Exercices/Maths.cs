@@ -10,8 +10,7 @@ namespace Recursive_Exercices
     {
         public static List<int> RankBetween(int bottom, int top)
         {
-            List<int> list = new List<int>();
-            return FillArray(list, bottom, top);
+            return FillArray(new List<int>(), bottom, top);
         }
         
         private static List<int> FillArray(List<int> list, int bottom, int top)
