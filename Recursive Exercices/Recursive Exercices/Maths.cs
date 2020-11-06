@@ -8,13 +8,13 @@ namespace Recursive_Exercices
 {
     class Maths
     {
-        public static int[] RankTo(int top)
+        public static LinkedList<int> RankTo(int top)
         {
-            return FillArray(top, new int[top + 1]);
+            return FillArray(top, new LinkedList<int>());
         }
-        private static int[] FillArray(int top, int[] list)
+        private static LinkedList<int> FillArray(int top, LinkedList<int> list)
         {
-            list[top] = top;
+            list.AddFirst(top);
 
             if (top == 0)
             { return list; }
