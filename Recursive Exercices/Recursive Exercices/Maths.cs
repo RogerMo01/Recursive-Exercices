@@ -8,5 +8,9 @@ namespace Recursive_Exercices
 {
     class Maths
     {
+        public static int SumTo(int top)
+        {
+            return (top == 1) ? 1 : top + SumTo(top - 1);
+        }
     }
 }
