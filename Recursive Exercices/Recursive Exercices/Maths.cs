@@ -10,7 +10,7 @@ namespace Recursive_Exercices
     {
         public static int Factorial(int number)
         {
-            return (number == 1) ? 1 : number * Factorial(number - 1);
+            return (number == 0) ? 1 : number * Factorial(number - 1);
         }
     }
 }
