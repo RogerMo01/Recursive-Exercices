@@ -25,5 +25,12 @@ namespace Recursive_Exercices
 
             return FillArray(list, element, indexer + 1);
         }
+        public static int Fibonacci(int positionInSequence)
+        {
+            if (positionInSequence == 1) { return 0; }
+            if (positionInSequence == 2) { return 1; }
+
+            return Fibonacci(positionInSequence - 1) + Fibonacci(positionInSequence - 2);
+        }
     }
 }
