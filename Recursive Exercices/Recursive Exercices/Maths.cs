@@ -32,5 +32,15 @@ namespace Recursive_Exercices
 
             return Fibonacci(positionInSequence - 1) + Fibonacci(positionInSequence - 2);
         }
+
+        public static int AddN(int numberOfElements, List<int> list)
+        {
+            if (numberOfElements == 1)
+            { return list[numberOfElements - 1]; }
+            if (numberOfElements == 0)
+            { return 0; }
+
+            return list[numberOfElements - 1] + AddN(numberOfElements - 1, list);
+        }
     }
 }
