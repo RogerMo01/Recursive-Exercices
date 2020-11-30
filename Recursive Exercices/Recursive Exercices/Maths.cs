@@ -32,5 +32,27 @@ namespace Recursive_Exercices
 
             return Fibonacci(positionInSequence - 1) + Fibonacci(positionInSequence - 2);
         }
+
+        public static string Sort(List<int> list)
+        {
+            if (list.Count == 1) { return list[0].ToString(); }
+
+            int minor = FindMinor(list);
+            list.Remove(minor);
+
+            return $"{minor.ToString()}|{Sort(list)}";
+        }
+
+        private static int FindMinor(List<int> list)
+        {
+            int minor = list[0];
+
+            foreach (var item in list)
+            {
+                if (item < minor) { minor = item; }
+            }
+
+            return minor;
+        }
     }
 }
