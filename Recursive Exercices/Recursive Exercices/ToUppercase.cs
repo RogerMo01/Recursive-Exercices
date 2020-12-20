@@ -13,14 +13,14 @@ namespace Recursive_Exercices
             return Convert(word, "");
         }
 
-        private static string Convert(string word, string returnWord)
+        private static string Convert(string word, string result)
         {
-            if (returnWord.Count() == word.Count())
+            if (result.Count() == word.Count())
             {
-                return returnWord;
+                return result;
             }
 
-            return Convert(word, returnWord.Insert(returnWord.Count(), word.ElementAt(returnWord.Count()).ToString().ToUpper()));
+            return Convert(word, result.Insert(result.Count(), word.ElementAt(result.Count()).ToString().ToUpper()));
         }
     }
 }
