@@ -8,6 +8,11 @@ namespace Recursive_Exercices
 {
     class Maths
     {
+        public static int Factorial(int number)
+        {
+            return (number == 0) ? 1 : number * Factorial(number - 1);
+        {
+
         public static List<int> RemoveAll(List<int> list, int element)
         {
             return FillArray(list, element);
@@ -25,6 +30,7 @@ namespace Recursive_Exercices
 
             return FillArray(list, element, indexer + 1);
         }
+
         public static int Fibonacci(int positionInSequence)
         {
             if (positionInSequence == 1) { return 0; }
