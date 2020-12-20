@@ -15,11 +15,7 @@ namespace Recursive_Exercices
         private static LinkedList<int> FillArray(int top, LinkedList<int> list)
         {
             list.AddFirst(top);
-
-            if (top == 0)
-            { return list; }
-
-            return FillArray(top - 1, list);
+            return (top == 0) ? list : FillArray(top - 1, list);
         }
     }
 }
