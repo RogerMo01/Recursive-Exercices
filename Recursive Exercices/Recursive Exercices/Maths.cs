@@ -16,11 +16,7 @@ namespace Recursive_Exercices
         private static List<int> FillArray(List<int> list, int bottom, int top)
         {
             list.Add(bottom);
-
-            if (bottom == top)
-            { return list; }
-
-            return FillArray(list, bottom + 1, top);
+            return (bottom == top) ? list : FillArray(list, bottom + 1, top);
         }
     }
 }
