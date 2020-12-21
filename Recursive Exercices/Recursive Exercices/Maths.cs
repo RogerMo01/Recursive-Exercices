@@ -12,12 +12,12 @@ namespace Recursive_Exercices
         {
             return FillArray(new List<int>(), bottom, top);
         }
-        
         private static List<int> FillArray(List<int> list, int bottom, int top)
         {
             list.Add(bottom);
             return (bottom == top) ? list : FillArray(list, bottom + 1, top);
         }
+
         public static LinkedList<int> RankTo(int top)
         {
             return FillArray(top, new LinkedList<int>());
@@ -26,18 +26,18 @@ namespace Recursive_Exercices
         {
             list.AddFirst(top);
             return (top == 0) ? list : FillArray(top - 1, list);
+        }
 
         public static int Factorial(int number)
         {
             return (number == 0) ? 1 : number * Factorial(number - 1);
-        {
+        }
 
         public static List<int> RemoveAll(List<int> list, int element)
         {
-            return FillArray(list, element);
+            return FillArray2(list, element);
         }
-
-        private static List<int> FillArray(List<int> list, int element, int indexer = 0)
+        private static List<int> FillArray2(List<int> list, int element, int indexer = 0)
         {
             if (indexer == list.Count)
             { return list; }
@@ -47,7 +47,7 @@ namespace Recursive_Exercices
                 list.RemoveAt(indexer);
             }
 
-            return FillArray(list, element, indexer + 1);
+            return FillArray2(list, element, indexer + 1);
         }
 
         public static int Fibonacci(int positionInSequence)
